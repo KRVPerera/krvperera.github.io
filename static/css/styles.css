@@ -221,6 +221,40 @@ img {
   color: #fff;
 }
 
+/*-----------------------------------
+* 04. Big social icons
+-------------------------------------*/
+.social-icons-bg {
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons-bg li {
+  display: inline-block;
+  vertical-align: top;
+  list-style: none;
+}
+
+.social-icons-bg li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;    
+  color: #333;
+  border-radius: 50%;
+  -webkit-transition: ease all 0.3s;
+     -moz-transition: ease all 0.3s;
+       -o-transition: ease all 0.3s;
+          transition: ease all 0.3s;
+}
+
+.social-icons-bg li a:hover {
+  background: #333;
+  color: #fff;
+}
+
 /*---------------------------------
 * 03. Section title
 -----------------------------------*/
@@ -1610,29 +1644,6 @@ blockquote.blockquote-left .parson { font-weight: 600; }
   color: #fff;
 }
 
-.contact-form {
-    border-left: 1px solid #ddd;
-    padding: 8%;
-}
-.contact-form h2{
-  text-transform: capitalize;
-  margin: 0;
-  padding: 0 0 20px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #151515;
-}
-.contact-form .form-control {
-  border-radius: 0;
-  font-size: 14px; 
-  height: 45px;
-}
-.contact-form .form-control.invalid {
-  border-color: #ff0000;
-}
-.contact-form textarea.form-control  {
-  height: 100px;
-}
 
 .contact-us-box {
     margin: 0 5%;
@@ -1658,6 +1669,16 @@ blockquote.blockquote-left .parson { font-weight: 600; }
   }
 }
 
+
+/*-----------------------------------------
+*    e-mail
+------------------------------------------*/
+
+.email {
+    list-style: none;
+    font-size: 20px;
+    padding: 0;
+}
 
 /*-----------------------------------------
 *  Footer
