@@ -1197,7 +1197,8 @@ img {
 }
 
 .portfolio-hover-01 .hover {
-  background: rgba(255, 255, 255, 0.62);
+  background: linear-gradient(to right, #7E57C2, #7E57C2);
+/*  background: rgba(255, 255, 255, 0.62);*/
   position: absolute;
   bottom: 0;
   visibility: hidden;
@@ -4083,3 +4084,5 @@ blockquote.blockquote-left .parson { font-weight: 600; }
   .sm-p-25-b {padding-bottom: 25%;}
   .sm-p-25-half-b {padding-bottom: 25.5%;}
 }
+
+
