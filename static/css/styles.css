@@ -35,6 +35,31 @@ Table of contents
 /*---------------------------------
 * 01. Loading
 -----------------------------------*/
+
+:root {
+    --maxWidth: 1280px;
+    --clr-50 : #E0F2F1;
+    --clr-100 : #B2DFDB;
+    --clr-200 : #80CBC4;
+    --clr-300 : #4DB6AC;
+    --clr-400 : #26A69A;
+    --clr-500 : #009688;
+    --clr-600 : #00897B;
+    --clr-700 : #00796B;
+    --clr-800 : #00695C;
+    --clr-900 : #004D40;
+    --clr-a100 : #A7FFEB;
+    --clr-a200 : #64FFDA;
+    --clr-a400 : #1DE9B6;
+    --clr-a700 : #00BFA5;
+    --clr-900-transparent : rgba(38, 50, 56, 0.7);
+
+    --fontSuperBig: 2.5rem;
+    --fontBig: 1.5rem;
+    --fontMed: 1.2rem;
+    --fontSmall: 1rem;
+    --fontVerySmall: 0.8rem;
+}
 #loading {
     position: fixed;
     top: 0;
@@ -284,22 +309,22 @@ img {
 /*---------------------------------
 * 03. Section title
 -----------------------------------*/
-.section-title h2 {
-    margin: 0;
-    padding: 0 0 20px;
-    font-weight: 600;
-    font-size: 35px;
-    display: inline-block;
-    z-index: 1;
-    color: #151515;
-}
-
 .section-title p {
     margin: 0;
     font-size: 16px;
 }
 
+
 @media (max-width: 767px) {
+    .section-title h2 {
+        margin: 0;
+        padding: 0 0 20px;
+        font-weight: 600;
+        font-size: 35px;
+        display: inline-block;
+        z-index: 1;
+        color: #151515;
+    }
     .section-title h2 {
         font-size: 25px;
     }
@@ -670,7 +695,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.4
+    opacity: 0.4;
 }
 
 .home-banner .home-text-center {
@@ -1737,75 +1762,35 @@ blockquote.blockquote-left .parson {
     text-transform: capitalize;
     margin: 0;
     padding: 0 0 15px;
-    font-size: 20px;
+    font-size: var(--fontMed);
     font-weight: 600;
     text-align: center;
-    color: #151515;
+    color: var(--clr-50);;
 }
 
-.contact-info-box .desc {
-    /* width: 350px; */
-    max-width: 100%;
-    margin-bottom: 40px;
-}
-
-.contact-info-box .contact-info {
-    position: relative;
-    padding-left: 50px;
-    padding-bottom: 20px;
-}
-
-.contact-info-box .contact-info .icon {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    line-height: 35px;
-    left: 0;
-    font-size: 17px;
-}
-
-.contact-info-box .contact-info p {
+.contact-info-box p {
+    text-transform: capitalize;
     margin: 0;
-    font-size: 14px;
-}
-
-.contact-info-box .social-icons {
-    margin: 0;
-    padding: 0 0px 0 40px;
-}
-
-.contact-info-box .social-icons li {
-    display: inline-block;
-    vertical-align: top;
-    list-style: none;
-}
-
-.contact-info-box .social-icons li a {
-    display: block;
-    width: 30px;
-    height: 30px;
+    padding: 0 0 15px;
+    font-size: var(--fontVerySmall);
+    font-weight: 600;
     text-align: center;
-    line-height: 30px;
-    color: #333;
-    border-radius: 50%;
+    color: var(--clr-50);;
 }
 
-.contact-info-box .social-icons li a:hover {
-    background: #333;
-    color: #fff;
+
+.contact-info-box h2 .social-icons li a:hover {
+    background: var(--clr-800);
 }
 
 
 .contact-us-box {
     margin: 0 5%;
     position: relative;
-    background: #fff;
+    background: var(--clr-800);
     box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    color: var(--clr-50);
 }
 
 @media (max-width: 991px) {
@@ -1841,7 +1826,7 @@ blockquote.blockquote-left .parson {
 -----------------------------------------*/
 
 .footer {
-    background: #111;
+    background: var(--clr-900);
     margin-top: -100px;
     padding: 150px 0 50px;
     text-align: center;
@@ -1854,6 +1839,7 @@ blockquote.blockquote-left .parson {
 
 .footer p {
     margin: 0;
+    color: var(--clr-50);
 }
 
 .footer .footer-logo {
@@ -1866,6 +1852,7 @@ blockquote.blockquote-left .parson {
     position: relative;
     display: inline-block;
     vertical-align: top;
+
 }
 
 .footer .footer-logo span span {
@@ -1876,7 +1863,7 @@ blockquote.blockquote-left .parson {
     bottom: 11px;
     right: -8px;
     float: left;
-    background: #fff;
+    background: var(--clr-a700);
 }
 
 .footer .social-icons {
@@ -1888,7 +1875,7 @@ blockquote.blockquote-left .parson {
     height: 40px;
     text-align: center;
     line-height: 40px;
-    color: #a5a5a5;
+    color: var(--clr-50);
 }
 
 /*-----------------------------------------
@@ -11064,3 +11051,40 @@ blockquote.blockquote-left .parson {
         padding-bottom: 25.5%;
     }
 }
+
+* {
+    margin: 0;
+
+}
+
+.curve {
+    background: var(--clr-100);
+    color: black;
+    display: flex;
+    /*text-align: center;*/
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-section {
+    background: var(--clr-50);
+}
+
+.blog-section, .portfolio-section{
+    background: var(--clr-50);
+}
+/*.my-image {*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    isolation: isolate;*/
+/*}*/
+
+/*.my-image::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    inset: 0;*/
+/*    z-index: -1;*/
+/*    background: black;*/
+/*    opacity: 0.1;*/
+/*}*/
