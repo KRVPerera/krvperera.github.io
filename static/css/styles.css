@@ -1113,7 +1113,8 @@ img {
 }
 
 .portfolio-col .portfolio-img {
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .portfolio-col .portfolio-info {
