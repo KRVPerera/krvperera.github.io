@@ -1,0 +1,11 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 300px;
+    background: #0c5460;
+}
+
+footer {
+    padding-top: 50px;
+}
