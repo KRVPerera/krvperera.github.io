@@ -11,6 +11,7 @@ let hitpositionSquare = squares[0]
 function randomSquare() {
     squares.forEach(className => {
         className.classList.remove('mole')
+        className.classList.remove('mole-whacked')
     })
     let randomPosition = squares[Math.floor(Math.random() * 9)]
     while (hitposition === randomPosition.id) {
