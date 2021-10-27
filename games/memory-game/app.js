@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var cards = document.querySelectorAll('img')
         const optionOneId = cardsChosenId[0]
         const optionTwoId = cardsChosenId[1]
-        if (optionOneId === optionTwoId) {
+        if (optionOneId === optionTwoId) { // same card clicked twice
             cards[optionOneId].setAttribute('src', 'images/frame.png')
             cards[optionTwoId].setAttribute('src', 'images/frame.png')
         } else if (cardsChosen[0] === cardsChosen[1]) {
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 300)
+            setTimeout(checkForMatch, 200)
         }
     }
 
