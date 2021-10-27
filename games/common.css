@@ -1,0 +1,24 @@
+:root {
+    --maxWidth: 1280px;
+    --clr-50 : #E0F2F1;
+    --clr-100 : #B2DFDB;
+    --clr-200 : #80CBC4;
+    --clr-300 : #4DB6AC;
+    --clr-400 : #26A69A;
+    --clr-500 : #009688;
+    --clr-600 : #00897B;
+    --clr-700 : #00796B;
+    --clr-800 : #00695C;
+    --clr-900 : #004D40;
+    --clr-a100 : #A7FFEB;
+    --clr-a200 : #64FFDA;
+    --clr-a400 : #1DE9B6;
+    --clr-a700 : #00BFA5;
+    --clr-900-transparent : rgba(38, 50, 56, 0.7);
+
+    --fontSuperBig: 2.5rem;
+    --fontBig: 1.5rem;
+    --fontMed: 1.2rem;
+    --fontSmall: 1rem;
+    --fontVerySmall: 0.8rem;
+}
