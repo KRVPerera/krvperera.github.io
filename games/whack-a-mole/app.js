@@ -2,6 +2,7 @@ const squares = document.querySelectorAll('.square')
 const mole = document.querySelectorAll('.mole')
 const timeLeft = document.querySelector('#time-left')
 let score = document.querySelector('#score')
+const touchDevice = (navigator.maxTouchPoints || 'ontouchstart' in document.documentElement);
 
 let result = 0
 let hitposition = -1
@@ -32,12 +33,28 @@ squares.forEach(id => {
                 hitpositionSquare.classList.remove('mole-whacked')
             }
         })
-    id.addEventListener('mousedown', () => {
-        if (id.id === hitposition) {
-            hitpositionSquare.classList.remove('mole')
-            hitpositionSquare.classList.add('mole-whacked')
+
+        id.addEventListener('mousedown', () => {
+            if (id.id === hitposition) {
+                hitpositionSquare.classList.remove('mole')
+                hitpositionSquare.classList.add('mole-whacked')
+            }
+        })
+        if (touchDevice) {
+            id.addEventListener('pointerdown', () => {
+                if (id.id === hitposition) {
+                    hitpositionSquare.classList.remove('mole')
+                    hitpositionSquare.classList.add('mole-whacked')
+                }
+            })
+            id.addEventListener('pointerup', () => {
+                if (id.id === hitposition) {
+                    result = result + 1
+                    score.textContent = result
+                    hitpositionSquare.classList.remove('mole-whacked')
+                }
+            })
         }
-    })
     }
 )
 
