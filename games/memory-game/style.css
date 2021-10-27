@@ -4,8 +4,20 @@
     height: 400px;
     width: 300px;
     background: #0c5460;
+    margin: 0 auto;
 }
+
+.wrapper {
+    width: 100%;
+    /*margin: 0 auto;*/
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+
 
 footer {
     padding-top: 50px;
+    text-align: center;
 }
