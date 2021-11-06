@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var cardsChosenId = []
     var cardsWon = []
     var isFlipping = false;
+    var prevCardId = -1;
 
     // create your board
     function createBoard() {
@@ -109,10 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const optionOneId = cardsChosenId[0]
         const optionTwoId = cardsChosenId[1]
-        if (optionOneId === optionTwoId) { // same card clicked twice
-            cards[optionOneId].setAttribute('src', 'images/frame.png')
-            cards[optionTwoId].setAttribute('src', 'images/frame.png')
-        } else if (cardsChosen[0] === cardsChosen[1]) {
+        if (cardsChosen[0] === cardsChosen[1]) {
             // alert('You found a match')
             cards[optionOneId].setAttribute('src', 'images/square.png')
             cards[optionTwoId].setAttribute('src', 'images/square.png')
@@ -133,8 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cardsWon.length === cardArray.length/2) {
             resultDisaply.textContent = 'Congratulations! You found them all'
         }
-        isFlipping = false
-
     }
     // flip your card
 
@@ -143,14 +139,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return
         }
         var cardId = this.getAttribute('data-id')
+        if (prevCardId === cardId) {
+            this.setAttribute('src', 'images/frame.png')
+            prevCardId = -1
+            cardsChosen = []
+            cardsChosenId = []
+            return
+        }
+        prevCardId = cardId
         cardsChosen.push(cardArray[cardId].name)
         cardsChosenId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if (cardsChosen.length === 2) {
             isFlipping = true
-            setTimeout(checkForMatch, 400)
+            setTimeout(() => {
+                checkForMatch()
+                isFlipping = false
+            }, 400)
         }
     }
-
-
 })
