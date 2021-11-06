@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var cardsChosen = []
     var cardsChosenId = []
     var cardsWon = []
+    var isFlipping = false;
 
     // create your board
     function createBoard() {
@@ -103,7 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // check for matches
     function checkForMatch() {
+
         var cards = document.querySelectorAll('img')
+
         const optionOneId = cardsChosenId[0]
         const optionTwoId = cardsChosenId[1]
         if (optionOneId === optionTwoId) { // same card clicked twice
@@ -123,22 +126,28 @@ document.addEventListener('DOMContentLoaded', () => {
             // alert('Sorry')
         }
 
+
         cardsChosen = []
         cardsChosenId = []
         resultDisaply.textContent = cardsWon.length
         if (cardsWon.length === cardArray.length/2) {
             resultDisaply.textContent = 'Congratulations! You found them all'
         }
+        isFlipping = false
 
     }
     // flip your card
 
     function flipCardFunction() {
+        if (isFlipping) {
+            return
+        }
         var cardId = this.getAttribute('data-id')
         cardsChosen.push(cardArray[cardId].name)
         cardsChosenId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if (cardsChosen.length === 2) {
+            isFlipping = true
             setTimeout(checkForMatch, 400)
         }
     }
