@@ -1,7 +1,7 @@
 @import "../common.css";
 
 .container {
-    background: var(--clr-700);
+    background: var(--clr-200);
 }
 
 .grid {
@@ -14,7 +14,7 @@
 }
 
 footer {
-    background: var(--clr-300);
+    background: var(--clr-200);
     padding-top: 50px;
     text-align: center;
 }
